@@ -4,11 +4,11 @@ import '../styles/global.css';
 
 // data source
 // replace temporary JSON placeholder API
-const source = 'https://jsonplaceholder.typicode.com/users';
+const source = 'https://pokeapi.co/api/v2/pokemon';
 // fetch the data
 const res = await fetch(source); 
 // store retreived data
-const data = await res.json();
+const pokeData = await res.json();
 ---
 
 <html lang="en">
@@ -32,24 +32,14 @@ const data = await res.json();
 		<main id="content" class="main-area">
 
 			<ul class="cards">
-		  
+		  ()
 				<!-- Your API Data -->
 				{
-					data.map( item =>
-					<li class="card-item">
-						<a href="#">
-							<figure class="card">
-							<img src="https://assets.codepen.io/16425/image-placeholder.png" alt="Placeholder">
-							<figcaption class="caption">
-								<h3 class="caption-title">{item.name}</h3>
-								<p>{item.company.catchPhrase}</p>
-							</figcaption>
-							</figure>
-						</a>
-					</li> 
-					)
-				}
-		  
+					 pokeData.results.map((pokemon) => (
+						<li class="card">
+							{pokemon.name}
+							</li>
+						))}
 			</ul>
 		  </main>
 		  
