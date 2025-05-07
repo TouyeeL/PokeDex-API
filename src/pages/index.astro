@@ -28,18 +28,35 @@ const pokeData = await res.json();
 		<header class="masthead">
 			<img src="/public/Pokeball" alt="">
 			<h1 class="site-title">Pokedex</h1>
+			<input type="text" class = "search" placeholder="Search Pokemon..." />
 		</header>
 
 		<main id="content" class="main-area">
-
+			<p>Sort By: </p>
+			<input 
+			type="radio" 
+			name="type" 
+			id="number" 
+			value="number"
+			checked
+			>
+			<label for="name">Number</label>
+			<input 
+			type="radio" 
+			name="type" 
+			id="number" 
+			value="number"
+			checked
+			>
+			<label for="number">Name</label>
 			<ul class="cards">
 				<!-- Your API Data -->
 				{
 					 pokeData.results.map((pokemon) => (
 						<li class="card">
-							<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/')[6]}.png`} alt={pokemon.name} />
+							<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/')[6]}.png`} alt={pokemon.sprites} />
 							<h2 class="card-title">{pokemon.name}</h2>
-						
+							
 							</li>
 						))}
 			</ul>

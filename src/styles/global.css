@@ -3,6 +3,7 @@
 /* Header */
 .masthead {
     font-family: 'Chillax', sans-serif;
+    font-size: 2em;
     color: white;
     background: red;
     text-align: center;
@@ -17,8 +18,18 @@ img {
     height: auto;
   }
     
-body{
+h2{
     font-family: 'Alpino', sans-serif;
+    text-align: center;
+}
+
+li{
+    background: white;
+    border: 1px solid black;
+    
+}
+main{
+    background: red;
 }
 
 
@@ -57,10 +68,11 @@ line-height: 1.1em;
 CSS Grid layout for wider screens, when browser supports grid:
 --------------------------------------------------------------*/
 @media screen and (min-width: 30em) {
-.cards {
+.cards  {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 1em;
+    
 }
 
 .cards a {
