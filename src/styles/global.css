@@ -2,6 +2,7 @@
 
 /* Header */
 .masthead {
+    font-family: 'Chillax', sans-serif;
     text-align: center;
     border-bottom: 1px solid hsl(0, 0%, 90%);
 }
@@ -14,6 +15,11 @@ img {
     height: auto;
   }
     
+body{
+    font-family: 'Alpino', sans-serif;
+}
+
+
 .cards {
 margin: 0;
 padding: 0;

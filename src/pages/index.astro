@@ -4,7 +4,7 @@ import '../styles/global.css';
 
 // data source
 // replace temporary JSON placeholder API
-const source = 'https://pokeapi.co/api/v2/pokemon';
+const source = 'https://pokeapi.co/api/v2/pokemon/?limit=1025';
 // fetch the data
 const res = await fetch(source); 
 // store retreived data
@@ -26,13 +26,13 @@ const pokeData = await res.json();
 	<body>
 		
 		<header class="masthead">
-			<h1 class="site-title">Gallery</h1>
+			<img src="/public/Pokeball" alt="">
+			<h1 class="site-title">Pokedex</h1>
 		</header>
 
 		<main id="content" class="main-area">
 
 			<ul class="cards">
-		  ()
 				<!-- Your API Data -->
 				{
 					 pokeData.results.map((pokemon) => (
