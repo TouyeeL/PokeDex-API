@@ -37,7 +37,9 @@ const pokeData = await res.json();
 				{
 					 pokeData.results.map((pokemon) => (
 						<li class="card">
-							{pokemon.name}
+							<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/')[6]}.png`} alt={pokemon.name} />
+							<h2 class="card-title">{pokemon.name}</h2>
+						
 							</li>
 						))}
 			</ul>
